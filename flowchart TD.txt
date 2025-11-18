@@ -1,0 +1,14 @@
+flowchart TD
+
+A[Ground Switch]
+L[laptop1]<--> A
+L2[laptop2]<-->A
+    
+B(Rover Switch)
+A<--->|Network that won't suck this time| B
+
+B<-->K[Raspberrypi mqtt broker]
+B <--->|L| D[left side chassis]
+B <--->|R| E[right side chassis]
+B <---> F[Manipulator]
+B <---> G[Science]
